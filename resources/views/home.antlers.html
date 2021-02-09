@@ -1,0 +1,24 @@
+<header class="text-center">
+    <h1 class="text-2xl">VANILLA LAB</h1>
+    <h2 class="text-xl">Responsive images</h2>
+</header>
+<hr>
+<main class="container bg-gray-200">
+    <div class="grid grid-cols-3 gap-4">
+        <div class="col-span-2 col-start-1">
+            {{home_img}}
+            <p>{{url}}</p>
+            {{/home_img}}
+        </div>
+        <div class="col-span-2 col-start-1">
+            {{asset url="/assets/_cover.jpg"}}
+                <img src="{{url}}">
+            {{/asset}}
+        </div>
+        {{home_img}}
+        <div class="col-span-1 col-start-{{count}}">
+            {{responsive:url glide:width="600"}}
+        </div>
+        {{/home_img}}
+    </div>
+</main>
