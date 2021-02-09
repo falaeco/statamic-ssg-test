@@ -6,7 +6,9 @@ module.exports = {
         './content/**/*.md'
       ],
       options: {
-          safelist: [/col-start-\d/]
+          whitelist: [
+              "col-start-1", "col-start-2", "col-start-3"
+          ]
       }
     },
     important: true,
